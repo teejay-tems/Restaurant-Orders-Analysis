@@ -96,5 +96,20 @@ Establishing a relationship between the menu_items table and the order_details t
 **_3. Avoid Data Duplication:_** By referencing the menu_items table in the order_details table, you avoid duplicating item information. Each item’s details are stored once in the menu_items table and referenced as needed in the order_details table.
 
 **_4. Simplified Maintenance:_** Having a clear relationship between tables makes it easier to maintain the database. Updates to item details need to be made in only one place (the menu_items table), and those changes will automatically be reflected in any related orders.
+For the complete data cleaning documentation, [*_Click Here_*]()
+## Data Analysis and Insights
+This project aims to analyze sales data to identify peak ordering times and seasonal trends. Evaluate the profit margins for each item and identify the most profitable dishes and drinks.
+In addition, to assess the popularity of the different item categories (e.g., appetizers, main courses, desserts, beverages) over the quarter. Provide recommendations for menu adjustments based on item popularity and profitability.
+
+This analysis will provide answers to the following questions.
+
+**1.	What were the least and most ordered items? What categories were they in?**
 
 
+**2.	What do the highest spend orders look like? Which items did they buy and how much did they spend?**
+
+
+**3.	Were there certain times that had more or less orders?**
+
+
+**4.	Which cuisines should we focus on developing more menu items for based on the data?**
