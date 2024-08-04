@@ -78,7 +78,6 @@ For each table used in the analysis, extensive data cleaning procedures were car
 
 **2.  Standardization:**
 - Ensured consistent naming conventions for item name and categories in the menu item tables.
-- Standardized price formats (e.g., ensuring all prices are in the same currency (USD) format).
   
 **3.  Duplicate Removal:**
 - To preserve data integrity and avoid skewed analysis results.
@@ -103,7 +102,7 @@ Establishing a relationship between the menu_items table and the order_details t
 
 **_4. Simplified Maintenance:_** Having a clear relationship between tables makes it easier to maintain the database. Updates to item details need to be made in only one place (the menu_items table), and those changes will automatically be reflected in any related orders.
 
-For the complete data cleaning documentation ![_*Click Here*_](Restaurant SQL PROJECT.pdf)  
+For the complete data cleaning documentation [_*Click Here*_](https://github.com/teejay-tems/Maven-Restaurant-Orders/blob/main/Restaurant_pics.jpeg)  
 
 ## Data Analysis and Insights
 This project aims to analyze sales data to identify peak ordering times and seasonal trends. Evaluate the profit margins for each item and identify the most profitable dishes and drinks.
