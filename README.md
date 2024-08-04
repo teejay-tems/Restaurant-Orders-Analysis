@@ -137,6 +137,9 @@ ORDER BY Total_Order DESC
 |Mexican|Chips & Salsa|461|
 |Asian|Orange Chicken|456|
 
+The most ordered item was the "Hamburger," found in the "American" category with 622 order. This classic dish is a clear favorite among our diners, consistently outperforming other items in the menu. Its high demand underscores its popularity and possibly its role as a reliable go-to choice for many customers.
+Analyzing these ordering trends will help to refined our current menu and also provides insights for future menu development, ensuring that we continue to meet and exceed customer expectations and maximize sales. 
+
 ``` SQL
 -- What were the least ordered items and What categories were they in?
 SELECT category,
@@ -162,6 +165,9 @@ ORDER BY Total_Order ASC
 |American|Hot Dog|257|
 |Italian|Meat Lasagna|273|
 
+The least ordered item in our restaurant data is "Chicken Tacos" which belongs to the "Mexican" category. This suggests that, despite being a popular dish in many establishments, it didn’t resonate as well with our customer base. The relatively low number of orders (123) could be due to various factors, such as customer preference, pricing, or the presence of more appealing items options on the menu.
+
+Identifying the least and most ordered items is crucial for our menu planning, inventory management,  and  it will help us to understand our customers’ preferences better. For instance, we might consider promoting " Chicken Tacos " through special offers or reviewing its recipe to increase its appeal. 
 
 **2.	What do the highest spend orders look like? Which items did they buy and how much did they spend?**
 ``` SQL
@@ -235,6 +241,9 @@ ORDER BY order_details_id;
 |759|Mexican|13.9|
 |760|Mexican|7|
 
+The highest spending orders in the restaurant dataset typically include a mix of high-value items across various categories. The combination of category, item name in a single order drives up the total spending significantly.
+High spending orders reflect customers' willingness to indulge in a comprehensive dining experience, often opting for multiple courses and premium items. This trend highlights the importance of offering a variety of high-quality menu options to cater to these diners and maximize revenue.
+
 
 **3.	Were there certain times that had more or less orders?**
 ``` SQL
@@ -263,6 +272,10 @@ ORDER BY Total_Count DESC
 |11|23|
 |5|10|
 
+Yes, there were distinct patterns in the ordering times. The afternoon (12:00 PM to 6:00 PM) saw the highest volume of orders, reflecting peak lunch periods when customers are most likely to order meals.
+
+In contrast, the night (9:00 PM to 11:00 PM) and late morning (10:00 AM to 11:00 AM) had noticeably fewer orders. This decrease during off-peak hours aligns with typical dining habits, where fewer people are looking to order meals outside of traditional mealtimes.
+
 **4.	Which cuisines should we focus on developing more menu items for based on the data?**
 ``` SQL
 SELECT TOP 5
@@ -281,6 +294,10 @@ ORDER BY item_count DESC
 |588|Korean Beef Bowl|
 |583|Cheeseburger|
 |571|French Fries|
+
+Based on the data, we should focus on developing more menu items for American and Asian cuisines. These categories consistently showed high customer demand, with items like "Hamburger " and "Edamame" being top sellers.
+Expanding these sections could further capitalize on their popularity and attract more diners. Additionally, enhancing the variety within these cuisines may lead to increased customer satisfaction and repeat business.
+Investing in Italian and American and Asian cuisine development aligns with current customer preferences and offers potential for revenue growth.
 
 ## Data Visualization
 This data visualization was created using Power BI, each visual created displays information for each question in the business objective.
