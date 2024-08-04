@@ -112,14 +112,175 @@ This analysis will provide answers to the following questions.
 
 **1.	What were the least and most ordered items? What categories were they in?**
 
+```SQL
+-- What were the most ordered items and What categories were they in?
+SELECT category,
+	   item_name,
+	   COUNT(order_details_id) AS Total_Order
+FROM Order_details  O
+JOIN Menu_items M
+ON M.item_id = O.item_id
+GROUP BY category, item_name
+ORDER BY Total_Order DESC
+```
+ |Category |Item_Name|Total |
+|--------------|-----------------|--------------|
+|American|Hamburger|622|
+|Asian|Edamame|620|
+|Asian|Korean Beef Bowl|588|
+|American|Cheeseburger|583|
+|American|French Fries|571|
+|Asian|Tofu Pad Thai|562|
+|Mexican|Steak Torta|562|
+|Italian|Spaghetti & Meatballs|470|
+|American|Mac & Cheese|463|
+|Mexican|Chips & Salsa|461|
+|Asian|Orange Chicken|456|
+
+``` SQL
+-- What were the least ordered items and What categories were they in?
+SELECT category,
+	   item_name,
+	   COUNT(order_details_id) AS Total_Order
+FROM Order_details  O
+JOIN Menu_items M
+ON M.item_id = O.item_id
+GROUP BY category, item_name
+ORDER BY Total_Order ASC
+```
+ |Category |Item_Name|Total |
+|--------------|-----------------|--------------|
+|Mexican|Chicken Tacos|123|
+|Asian|Potstickers|205|
+|Italian|Cheese Lasagna|207|
+|Mexican|Steak Tacos|214|
+|Mexican|Cheese Quesadilas|233|
+|Mexican|Chips & Guacamole|237|
+|American|Veggie Burger|238|
+|Italian|Shrimp Scampi|239|
+|Italian|Fettuccine Alfredo|249|
+|American|Hot Dog|257|
+|Italian|Meat Lasagna|273|
+
 
 **2.	What do the highest spend orders look like? Which items did they buy and how much did they spend?**
+``` SQL
+-- What do the highest spend orders look like?
+SELECT TOP 5
+       order_id,
+	   ROUND(SUM(price),1) AS Total
+FROM Order_details  O
+INNER JOIN Menu_items M
+ON M.item_id = O.item_id 
+GROUP BY order_id
+ORDER BY  Total DESC
+``` 
+|Order id |Total |
+|--------------|-----------------|
+|440|192.2|
+|2075|191.1|
+|1957|190.1|
+|330|189.7|
+|2675|185.1|
+
+
+``` SQL
+-- Details of the items they bought
+SELECT order_details_id,
+	   category,
+	   item_name
+FROM Order_details  O
+JOIN Menu_items M
+ON M.item_id = O.item_id
+WHERE order_id = 440
+```
+|Order_details_id |Category|Item_Name |
+|--------------|-----------------|--------------|
+|1003|Mexican|Steak Tacos|
+|1004|American|Hot Dog|
+|1005|Italian|Spaghetti|
+|1006|Italian|Spaghetti & Meatballs|
+|1007|Italian|Spaghetti & Meatballs|
+|1008|Italian|Fettuccine Alfredo|
+|1009|Italian|Fettuccine Alfredo|
+|1010|Asian|Korea Beef Bowl|
+|1011|Italian|Meat Lasagna|
+|1012|Asian|Edamame|
+|1013|Mexican|Chips & Salsa|
+
+
+``` SQL
+-- How much did they spend?
+SELECT order_details_id,
+	   category,
+	   ROUND(SUM(Price),1) AS Total_Amount_Spent
+FROM Order_details  O
+JOIN Menu_items M
+ON M.item_id = O.item_id
+WHERE order_id IN (440, 2075, 1957, 330, 2675)
+GROUP BY category, order_details_id
+ORDER BY order_details_id;
+```
+|Order_details_id |Category|Total_Amount_Spent |
+|--------------|-----------------|--------------|
+|750|Asian|16.5|
+|751|American|9|
+|752|Asian|14.5|
+|753|Asian|14.5|
+|754|Italian|14.5|
+|755|Italian|18|
+|756|Asian|18|
+|757|Asian|14.9|
+|758|Mexican|14.9|
+|759|Mexican|13.9|
+|760|Mexican|7|
 
 
 **3.	Were there certain times that had more or less orders?**
-
+``` SQL
+SELECT COUNT(order_details_id) AS Total_Count,
+        Hours
+FROM  order_details
+JOIN  menu_items
+ON     menu_items.item_id = order_details.item_id
+GROUP BY Hours
+ORDER BY Total_Count DESC
+``` 
+|Total_Count|Hours|
+|-----------|-----|
+|1659|12|
+|1558|13|
+|1355|17|
+|1290|18|
+|1074|19|
+|1035|16|
+|956|14|
+|882|20|
+|743|15|
+|624|11|
+|600|21|
+|305|22|
+|11|23|
+|5|10|
 
 **4.	Which cuisines should we focus on developing more menu items for based on the data?**
+``` SQL
+SELECT TOP 5
+   COUNT(order_details_id) AS item_count,
+    item_name
+FROM  order_details
+JOIN  menu_items
+ON     menu_items.item_id = order_details.item_id
+GROUP BY item_name
+ORDER BY item_count DESC
+```
+|Item_Count|Item_Name|
+|-----------|-----|
+|622|Hamburger|
+|620|Edamame|
+|588|Korean Beef Bowl|
+|583|Cheeseburger|
+|571|French Fries|
 
 ## Data Visualization
 This data visualization was created using Power BI, each visual created displays information for each question in the business objective.
