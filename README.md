@@ -81,10 +81,14 @@ For each table used in the analysis, extensive data cleaning procedures were car
 - Standardized price formats (e.g., ensuring all prices are in the same currency (USD) format).
   
 **3.  Duplicate Removal:**
-- To preserve data integrity and avoid skewed analysis results, I searched for duplicate entries.
+- To preserve data integrity and avoid skewed analysis results.
   
 **4.  Outlier Detection:**
 - I checked for any price outliers in the price column that might indicate data entry errors. The analysis showed that the minimum price is $5, and the maximum price is $20 for the items ordered, indicating that there are no outliers.
+
+**5. Added a new column:**
+A new column called "Hour" was added to the order table, calculating the time of the day that had more orders and less orders.  This column is essential for determining the hour in the day that yield more sales and which item in the menu is ordered most, this analysis offers insightful information about the most lucrative product categories.
+
 
 ## Established Relationships Between Tables.
 Establishing a relationship between the menu_items table and the order_details table is essential for organizing and managing the database efficiently. This relationship typically involves using foreign keys to connect related data across tables. 
