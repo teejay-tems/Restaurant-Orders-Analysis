@@ -103,7 +103,7 @@ Establishing a relationship between the menu_items table and the order_details t
 
 **_4. Simplified Maintenance:_** Having a clear relationship between tables makes it easier to maintain the database. Updates to item details need to be made in only one place (the menu_items table), and those changes will automatically be reflected in any related orders.
 
-For the complete data cleaning documentation [_*Click Here*_]()
+For the complete data cleaning documentation ![_*Click Here*_](Restaurant SQL PROJECT.pdf)  
 
 ## Data Analysis and Insights
 This project aims to analyze sales data to identify peak ordering times and seasonal trends. Evaluate the profit margins for each item and identify the most profitable dishes and drinks.
