@@ -1,5 +1,5 @@
 # Restaurant Orders
-![]()
+![](Restaurant_pics.jpeg)
 ## Introduction
 A SQL project that analyzes A quarter's worth of orders from a restaurant serving international cuisine, including the date and time of each order, the items ordered, and additional details on the type, name and price of the items.
 ## Table Of Content
@@ -73,7 +73,7 @@ I checked for any price outliers in the price column that might indicate data en
 
 ## Established Relationships Between Tables.
 Establishing a relationship between the menu_items table and the order_details table is essential for organizing and managing the database efficiently. This relationship typically involves using foreign keys to connect related data across tables. 
-![]()
+![](Data_Rshp.png)
 
 **Importance of Establishing the Relationships**
 - 1.Data Integrity: Establishing a foreign key relationship ensures that the item_id in the order_details table must correspond to a valid item_id in the menu_items table. it prevents invalid data from being inserted.
