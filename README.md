@@ -3,19 +3,19 @@
 ## Introduction
 A SQL and POWER BI project that analyzes A quarter's worth of orders from a restaurant serving international cuisine, including the date and time of each order, the items ordered, and additional details on the type, name and price of the items.
 ## Table Of Content
-- Introduction
-- Project Overview
-- Project Scope
-- Business Objective
-- Document Purpose
-- Use Case
-- Skills Demonstrated
-- Data Source
-- Data Cleaning and Processing
-- Data Analysis and Insight
-- Dara Visualization
-- Recommendation
-- Conclusion
+- [Introduction](https://github.com/teejay-tems/Maven-Restaurant-Orders#introduction)
+- [Project Overview](https://github.com/teejay-tems/Maven-Restaurant-Orders#project-overview)
+- [Project Scope](https://github.com/teejay-tems/Maven-Restaurant-Orders#project-scope)
+- [Business Objective](https://github.com/teejay-tems/Maven-Restaurant-Orders#business-objectives)
+- [Document Purpose](https://github.com/teejay-tems/Maven-Restaurant-Orders#document-purpose)
+- [Use Case](https://github.com/teejay-tems/Maven-Restaurant-Orders#use-case)
+- [Skills Demonstrated](https://github.com/teejay-tems/Maven-Restaurant-Orders#skills-demonstrated)
+- [Data Source](https://github.com/teejay-tems/Maven-Restaurant-Orders#data-source)
+- [Data Cleaning and Processing](https://github.com/teejay-tems/Maven-Restaurant-Orders#data-cleaning-and-processing)
+- [Data Analysis and Insight](https://github.com/teejay-tems/Maven-Restaurant-Orders#data-analysis-and-insights)
+- [Data Visualization](https://github.com/teejay-tems/Maven-Restaurant-Orders#data-visualization)
+- [Recommendation](https://github.com/teejay-tems/Maven-Restaurant-Orders#recommendations)
+- [Conclusion](https://github.com/teejay-tems/Maven-Restaurant-Orders#conclusion)
 
 ## Project Overview   
 This project evaluates a restaurant menu order and provides insights derived from the order sales analysis into the various product profitable, sales performance trends, the least and most ordered items.     
