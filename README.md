@@ -1,7 +1,7 @@
 # Restaurant Orders
 ![](Restaurant_pics.jpeg)
 ## Introduction
-A SQL project that analyzes A quarter's worth of orders from a restaurant serving international cuisine, including the date and time of each order, the items ordered, and additional details on the type, name and price of the items.
+A SQL and POWER BI project that analyzes A quarter's worth of orders from a restaurant serving international cuisine, including the date and time of each order, the items ordered, and additional details on the type, name and price of the items.
 ## Table Of Content
 - Introduction
 - Project Overview
@@ -13,6 +13,7 @@ A SQL project that analyzes A quarter's worth of orders from a restaurant servin
 - Data Source
 - Data Cleaning and Processing
 - Data Analysis and Insight
+- Dara Visualization
 - Recommendation
 - Conclusion
 
@@ -38,7 +39,7 @@ The primary business objective of the "Restaurant Menu Order Analysis" project i
 ## Document Purpose
 This documentation serves as a guide for project stakeholders, providing insights into the project's objectives, data sources, data analysis, and any other relevant information.
 ## Use Case
-The insights gained from the "Restaurant Menu Order Analysis" is intended for the following stakeholders.
+The insights gained from the **"Restaurant Menu Order Analysis"** is intended for the following stakeholders.
 
 **1.  Restaurant Owner/Management:** Management can use this analysis to support strategic choices about menu options and operational upgrades.  And, to provide a comprehensive overview of the restaurant's sales performance and profitability.
 
@@ -52,12 +53,13 @@ The insights gained from the "Restaurant Menu Order Analysis" is intended for th
 
 ## Skills Demonstrated
 - Data Connection in Microsoft SQL Server
-- Data Cleaning and Processing
+- Data Cleaning and Processing with SQL Server
 - Developed a Database Schema
-- Data Analysis
+- Data Analysis with SQL Server
 - Join
 - CTE (Common Table Expression)
-- SQL Window Functions
+- Data Connection in Power BI with SQL Server
+- Data Visualization with Power BI
 
 ## Data Source
 The project utilizes a dataset containing information on menus and order details. The dataset used for this analysis was downloaded from [Maven Analytics](https://mavenanalytics.io/data-playground?page=4&pageSize=5) website where datasets are available for practice purposes. The dataset is a CSV file, and it consists of two main tables which are menu table, and order table. 
@@ -96,7 +98,9 @@ Establishing a relationship between the menu_items table and the order_details t
 **_3. Avoid Data Duplication:_** By referencing the menu_items table in the order_details table, you avoid duplicating item information. Each item’s details are stored once in the menu_items table and referenced as needed in the order_details table.
 
 **_4. Simplified Maintenance:_** Having a clear relationship between tables makes it easier to maintain the database. Updates to item details need to be made in only one place (the menu_items table), and those changes will automatically be reflected in any related orders.
-For the complete data cleaning documentation, [*_Click Here_*]()
+
+For the complete data cleaning documentation [_*Click Here*_]()
+
 ## Data Analysis and Insights
 This project aims to analyze sales data to identify peak ordering times and seasonal trends. Evaluate the profit margins for each item and identify the most profitable dishes and drinks.
 In addition, to assess the popularity of the different item categories (e.g., appetizers, main courses, desserts, beverages) over the quarter. Provide recommendations for menu adjustments based on item popularity and profitability.
@@ -113,3 +117,24 @@ This analysis will provide answers to the following questions.
 
 
 **4.	Which cuisines should we focus on developing more menu items for based on the data?**
+
+## Data Visualization
+This data visualization was created using Power BI, each visual created displays information for each question in the business objective.
+You can interact with the [_**report here**_]()
+
+## Recommendations
+**1.	Menu Optimization**
+- It helps to highlight high-performing items to ensure they remain a staple on the menu.
+- Management should consider removing or modifying low-performing items to improve overall sales and customer satisfaction.
+  
+**2.	Promotional Strategies**
+- Develop targeted promotions for popular items to boost sales during off-peak times.
+- Introduce limited time offers for new or underperforming items to gauge customer interest.
+  
+**3.	Operational Improvements**
+- Streamline kitchen operations based on peak ordering times to reduce wait times and improve service efficiency.
+- Adjusting inventory management practices to minimize waste and ensure the availability of popular items.
+
+## Conclusion
+By analyzing the restaurant's order data, this project provides actionable insights that can help enhance menu offerings, optimize sales strategies, and improve overall operational efficiency. The recommendations derived from this analysis aim to drive profitability and ensure a better dining experience for customers.
+
