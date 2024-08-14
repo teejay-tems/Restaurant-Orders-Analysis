@@ -1,4 +1,4 @@
-# Restaurant Orders-Using SQL
+# Restaurant Orders
 ![](Restaurant_pics.jpeg)
 ---
 ## Introduction
@@ -42,15 +42,15 @@ This documentation serves as a guide for project stakeholders, providing insight
 ## Use Case
 The insights gained from the **"Restaurant Menu Order Analysis"** is intended for the following stakeholders.
 
-**1.  Restaurant Owner/Management:** Management can use this analysis to support strategic choices about menu options and operational upgrades.  And, to provide a comprehensive overview of the restaurant's sales performance and profitability.
+**1.Restaurant Owner/Management:** Management can use this analysis to support strategic choices about menu options and operational upgrades.  And, to provide a comprehensive overview of the restaurant's sales performance and profitability.
 
-**2.  Investors/Stakeholders:** By providing transparency regarding the restaurant's financial performance and growth opportunities. 
+**2.Investors/Stakeholders:** By providing transparency regarding the restaurant's financial performance and growth opportunities. 
 
-**3.  Chef/Kitchen Staff:**  Based on the analysis chefs are informed about which menu items are most and least popular among customers and provide adjustments in recipes and preparation methods to enhance profitability and customer satisfaction.
+**3.Chef/Kitchen Staff:**  Based on the analysis chefs are informed about which menu items are most and least popular among customers and provide adjustments in recipes and preparation methods to enhance profitability and customer satisfaction.
 
-**4.  Data Analyst:** To ensure alignment with the business objectives and facilitate ongoing analysis and reporting. 
+**4.Data Analyst:** To ensure alignment with the business objectives and facilitate ongoing analysis and reporting. 
 
-**5.  Marketing Team:** By utilizing the analysis, marketing teams should develop targeted promotional strategies based on insights from the sales analysis and introduce new or improved menu items.
+**5.Marketing Team:** By utilizing the analysis, marketing teams should develop targeted promotional strategies based on insights from the sales analysis and introduce new or improved menu items.
 
 ## Skills Demonstrated
 - Data Connection in Microsoft SQL Server
@@ -73,20 +73,20 @@ The analysis of this dataset aims to extract actionable insights that will help 
 Data cleaning is essential because the accuracy and reliability of input data significantly impacts the quality of analysis and the insights derived from it. Incomplete or inconsistent data can lead to inaccurate conclusions and complicates decision-making processes. By meticulously cleaning and preparing the data, I ensure that my analyses are based on a solid foundation, resulting in more dependable outcomes and well-informed decisions. This thorough data preparation process helps to enhance the overall quality and credibility of the project's insights and recommendations.
 For each table used in the analysis, extensive data cleaning procedures were carried out to ensure high data accuracy, integrity, and quality. The following steps were taken for each table.
 
-**1.  Data Validation:**
+**1.Data Validation:**
 - Verified that all columns (Item Name, Menu Category, Price, Order ID, Date, Time) contain appropriate data types (e.g., text for names and categories, numeric for prices, and order IDs, and date format for Date, time format for Time).
 - Checked for any missing or null values and addressed them appropriately (e.g., filling in missing data or removing incomplete records).
 
-**2.  Standardization:**
+**2.Standardization:**
 - Ensured consistent naming conventions for item name and categories in the menu item tables.
   
-**3.  Duplicate Removal:**
+**3.Duplicate Removal:**
 - To preserve data integrity and avoid skewed analysis results.
   
-**4.  Outlier Detection:**
+**4.Outlier Detection:**
 - I checked for any price outliers in the price column that might indicate data entry errors. The analysis showed that the minimum price is $5, and the maximum price is $20 for the items ordered, indicating that there are no outliers.
 
-**5. Added a new column:**
+**5.Added a new column:**
 A new column called "Hour" was added to the order table, calculating the time of the day that had more orders and less orders.  This column is essential for determining the hour in the day that yield more sales and which item in the menu is ordered most, this analysis offers insightful information about the most lucrative product categories.
 
 
@@ -95,13 +95,13 @@ Establishing a relationship between the menu_items table and the order_details t
 ![](Data_Rshp.png)
 **Importance of Establishing the Relationships**
 
-**_1. Data Integrity:_** Establishing a foreign key relationship ensures that the item_id in the order_details table must correspond to a valid item_id in the menu_items table. it prevents invalid data from being inserted.
+**_1.Data Integrity:_** Establishing a foreign key relationship ensures that the item_id in the order_details table must correspond to a valid item_id in the menu_items table. it prevents invalid data from being inserted.
 
-**_2. Efficient Data Retrieval:_** With the relationship established, one can use JOIN operations to efficiently retrieve related data from both tables in a single query. For example, writing a sql syntax that can join the order_details table with the menu_items table to get detailed information about the items in each order.
+**_2.Efficient Data Retrieval:_** With the relationship established, one can use JOIN operations to efficiently retrieve related data from both tables in a single query. For example, writing a sql syntax that can join the order_details table with the menu_items table to get detailed information about the items in each order.
 
-**_3. Avoid Data Duplication:_** By referencing the menu_items table in the order_details table, you avoid duplicating item information. Each item’s details are stored once in the menu_items table and referenced as needed in the order_details table.
+**_3.Avoid Data Duplication:_** By referencing the menu_items table in the order_details table, you avoid duplicating item information. Each item’s details are stored once in the menu_items table and referenced as needed in the order_details table.
 
-**_4. Simplified Maintenance:_** Having a clear relationship between tables makes it easier to maintain the database. Updates to item details need to be made in only one place (the menu_items table), and those changes will automatically be reflected in any related orders.
+**_4.Simplified Maintenance:_** Having a clear relationship between tables makes it easier to maintain the database. Updates to item details need to be made in only one place (the menu_items table), and those changes will automatically be reflected in any related orders.
 
 For the complete data cleaning documentation [_*Click Here*_](https://github.com/teejay-tems/Maven-Restaurant-Orders/blob/main/Restaurant%20SQL%20PROJECT.pdf)  
 
@@ -111,7 +111,7 @@ In addition, to assess the popularity of the different item categories (e.g., ap
 
 This analysis will provide answers to the following questions.
 
-**1.	What were the least and most ordered items? What categories were they in?**
+**1.What were the least and most ordered items? What categories were they in?**
 
 ```SQL
 -- What were the most ordered items and What categories were they in?
@@ -170,7 +170,7 @@ The least ordered item in our restaurant data is "Chicken Tacos" which belongs t
 
 Identifying the least and most ordered items is crucial for our menu planning, inventory management,  and  it will help us to understand our customers’ preferences better. For instance, we might consider promoting " Chicken Tacos " through special offers or reviewing its recipe to increase its appeal. 
 
-**2.	What do the highest spend orders look like? Which items did they buy and how much did they spend?**
+**2.What do the highest spend orders look like? Which items did they buy and how much did they spend?**
 ``` SQL
 -- What do the highest spend orders look like?
 SELECT TOP 5
@@ -246,7 +246,7 @@ The highest spending orders in the restaurant dataset typically include a mix of
 High spending orders reflect customers' willingness to indulge in a comprehensive dining experience, often opting for multiple courses and premium items. This trend highlights the importance of offering a variety of high-quality menu options to cater to these diners and maximize revenue.
 
 
-**3.	Were there certain times that had more or less orders?**
+**3.Were there certain times that had more or less orders?**
 ``` SQL
 SELECT COUNT(order_details_id) AS Total_Count,
         Hours
@@ -277,7 +277,7 @@ Yes, there were distinct patterns in the ordering times. The afternoon (12:00 PM
 
 In contrast, the night (9:00 PM to 11:00 PM) and late morning (10:00 AM to 11:00 AM) had noticeably fewer orders. This decrease during off-peak hours aligns with typical dining habits, where fewer people are looking to order meals outside of traditional mealtimes.
 
-**4.	Which cuisines should we focus on developing more menu items for based on the data?**
+**4.Which cuisines should we focus on developing more menu items for based on the data?**
 ``` SQL
 SELECT TOP 5
    COUNT(order_details_id) AS item_count,
@@ -305,15 +305,15 @@ This data visualization was created using Power BI, each visual created displays
 You can interact with the [_**report here**_]()
 
 ## Recommendations
-**1.	Menu Optimization**
+**1.Menu Optimization**
 - It helps to highlight high-performing items to ensure they remain a staple on the menu.
 - Management should consider removing or modifying low-performing items to improve overall sales and customer satisfaction.
   
-**2.	Promotional Strategies**
+**2.Promotional Strategies**
 - Develop targeted promotions for popular items to boost sales during off-peak times.
 - Introduce limited time offers for new or underperforming items to gauge customer interest.
   
-**3.	Operational Improvements**
+**3.Operational Improvements**
 - Streamline kitchen operations based on peak ordering times to reduce wait times and improve service efficiency.
 - Adjusting inventory management practices to minimize waste and ensure the availability of popular items.
 
