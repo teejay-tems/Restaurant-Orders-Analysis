@@ -305,15 +305,15 @@ This data visualization was created using Power BI, each visual created displays
 You can interact with the [_**report here**_]()
 
 ## Recommendations
-**1.Menu Optimization**
+ **1.Menu Optimization**
 - It helps to highlight high-performing items to ensure they remain a staple on the menu.
 - Management should consider removing or modifying low-performing items to improve overall sales and customer satisfaction.
   
-**2.Promotional Strategies**
+ **2.Promotional Strategies**
 - Develop targeted promotions for popular items to boost sales during off-peak times.
 - Introduce limited time offers for new or underperforming items to gauge customer interest.
   
-**3.Operational Improvements**
+ **3.Operational Improvements**
 - Streamline kitchen operations based on peak ordering times to reduce wait times and improve service efficiency.
 - Adjusting inventory management practices to minimize waste and ensure the availability of popular items.
 
