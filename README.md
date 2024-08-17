@@ -17,6 +17,7 @@ A SQL and POWER BI project that analyzes A quarter's worth of orders from a rest
 - [Data Visualization](https://github.com/teejay-tems/Maven-Restaurant-Orders#data-visualization)
 - [Recommendation](https://github.com/teejay-tems/Maven-Restaurant-Orders#recommendations)
 - [Conclusion](https://github.com/teejay-tems/Maven-Restaurant-Orders#conclusion)
+- [License](https://github.com/teejay-tems/Restaurant-Orders-Analysis/blob/main/LICENSE)
 
 ## Project Overview   
 This project evaluates a restaurant menu order and provides insights derived from the order sales analysis into the various product profitable, sales performance trends, the least and most ordered items.     
@@ -319,4 +320,8 @@ You can interact with the [_**report here**_]()
 
 ## Conclusion
 By analyzing the restaurant's order data, this project provides actionable insights that can help enhance menu offerings, optimize sales strategies, and improve overall operational efficiency. The recommendations derived from this analysis aim to drive profitability and ensure a better dining experience for customers.
+
+# License
+This repository is licensed under the [MIT License](https://github.com/teejay-tems/Restaurant-Orders-Analysis/blob/main/LICENSE)
+
 
